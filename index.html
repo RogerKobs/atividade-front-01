@@ -5,60 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arte e Pintura</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+      @import 'tailwindcss';
+      @theme {
+        --font-display: 'Source Sans 3';
+      }
+    </style>
   </head>
 
-  <body>
+  <body class="font-display">
     <header class="text-center">
       <h2 class="font-extrabold text-2xl m-6">Paintings</h2>
 
       <img src="./assets/banner.svg" alt="" class="w-full" />
     </header>
-    <main>
-      <section class="inicio">
+
+    <main class="bg-slate-100">
+      <section class="bg-white p-8">
         <!-- Lourenço -->
-         <div class="grid font-sans p-6 mt-20 lg:grid-cols-3 gap-10">
+        <div class="grid font-sans p-6 lg:grid-cols-3 gap-10">
+          <div class="flex justify-center items-center flex-col gap-4">
+            <img src="./assets/engrenagem.svg" alt="" />
 
-            <div class="flex justify-center items-center flex-col gap-4">
-                <img src="./assets/engrenagem.svg" alt="">
-                <p class="text-xl font-bold">Ipsum consequat</p>
-                <p class="text-xs">Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
-                <div class="h-[1px] bg-gray-300 w-full m-4 lg:invisible"></div>
-            </div>
+            <p class="text-xl font-bold">Ipsum consequat</p>
+            <p class="text-xs text-center font-light text-[#5D5D5D]">
+              Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros
+              et magna tempus.
+            </p>
 
-            <div class="flex justify-center items-center flex-col gap-4">
-                <img src="./assets/raio.svg" alt="">
-                <p class="text-xl font-bold">Magna etiam dolor</p>
-                <p class="text-xs">Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
-                <div class="h-[1px] bg-gray-300 w-full m-4 lg:invisible"></div>
-            </div>
+            <div class="h-[1px] bg-gray-300 w-full m-4 lg:invisible"></div>
+          </div>
 
-            <div class="flex items-center flex-col gap-4">
-                <img src="./assets/estrela.svg" alt="">
-                <p class="text-xl font-bold">Tempus adipiscing</p>
-                <p class="text-xs">Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
-            </div>
+          <div class="flex justify-center items-center flex-col gap-4">
+            <img src="./assets/raio.svg" alt="" />
+
+            <p class="text-xl font-bold">Magna etiam dolor</p>
+            <p class="text-xs text-center font-light text-[#5D5D5D]">
+              Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros
+              et magna tempus.
+            </p>
+
+            <div class="h-[1px] bg-gray-300 w-full m-4 lg:invisible"></div>
+          </div>
+
+          <div class="flex items-center flex-col gap-4">
+            <img src="./assets/estrela.svg" alt="" />
+
+            <p class="text-xl font-bold">Tempus adipiscing</p>
+            <p class="text-xs text-center font-light text-[#5D5D5D]">
+              Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros
+              et magna tempus.
+            </p>
+          </div>
         </div>
 
-            <div class="flex flex-col p-6 mt-10 gap-2 md:flex-row md:justify-center">
-                <button class="py-2 text-center rounded-md font-semibold text-white bg-[#D52349] px-5">Get Started</button>
-                <button class="py-2 text-center rounded-md font-semibold text-white bg-black md:px-5">Learn More</button>
-            </div>
+        <div class="flex flex-col gap-2 md:flex-row md:justify-center">
+          <button
+            class="py-2 text-center rounded font-semibold text-white bg-[#D52349] px-5"
+          >
+            Get Started
+          </button>
+
+          <button
+            class="py-2 text-center rounded font-semibold text-white bg-black md:px-5"
+          >
+            Learn More
+          </button>
+        </div>
       </section>
+
       <section class="portifolio">
         <!-- Nicola -->
       </section>
-      <section class="blog">
+
+      <section class="p-8">
+        <div class="flex justify-center items-center gap-4 mb-8">
+          <div class="h-[1px] w-full bg-[#CCCCCC]"></div>
+          <h2 class="font-bold text-lg whitespace-nowrap">The Blog</h2>
+          <div class="h-[1px] w-full bg-[#CCCCCC]"></div>
+        </div>
+
         <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
           <div class="bg-white">
             <img
-              class="w-full"
+              class="w-full h-64"
               src="assets/Bisonho.jpg"
               alt="Imagem_do_bisonho"
             />
+
             <div class="p-6">
-              <h3 class="font-bold text-2xl mb-2">O Olhar de Ta Pegah</h3>
-              <p class="text-gray-400 italic">Postado a 1 mês atras</p>
-              <p class="text-gray-400 my-6">
+              <h3 class="font-bold text-xl">O Olhar de Ta Pegah</h3>
+              <p class="text-gray-300 font-light italic text-sm">
+                Postado a 1 mês atras
+              </p>
+              <p class="text-gray-400 my-8 text-sm font-light">
                 Esta obra retrata Ta Pegah, o lendário anão que viveu há 4 mil
                 anos no Reino de Kareth. Com sua expressão intensa e postura
                 serena, a pintura capta a sabedoria e o mistério do Guardião das
@@ -71,12 +113,13 @@
 
               <div class="flex gap-4">
                 <button
-                  class="bg-[#D52349] rounded py-2 px-5 text-white font-semibold text-sm"
+                  class="bg-[#D52349] rounded py-2 px-8 text-white font-semibold text-sm"
                 >
                   Continue Lendo
                 </button>
+
                 <button
-                  class="bg-[#252122] rounded py-2 px-5 text-white font-semibold text-sm"
+                  class="bg-[#252122] rounded py-2 px-8 text-white font-semibold text-sm"
                 >
                   20 comentarios
                 </button>
@@ -86,16 +129,17 @@
 
           <div class="bg-white">
             <img
-              class="w-full"
+              class="w-full h-64"
               src="assets/Jaguara.jpg"
               alt="Imagem_do_jaguara"
             />
+
             <div class="p-6">
-              <h3 class="font-bold text-2xl mb-2">
-                O Olhar do Jaguarão da craudete
-              </h3>
-              <p class="text-gray-400 italic">Postado a 1 mês atras</p>
-              <p class="text-gray-400 my-6">
+              <h3 class="font-bold text-xl">O Olhar do Jaguarão da craudete</h3>
+              <p p class="text-gray-300 font-light italic text-sm">
+                Postado a 1 mês atras
+              </p>
+              <p class="text-gray-400 my-8 text-sm font-light">
                 Esta obra retrata Jaguarão, o lendário companheiro de Ta Pegah e
                 figura folclórica das antigas trilhas de Sanhacu. Com olhar
                 desconfiado e corpo levemente inclinado, a imagem sugere tanto
@@ -110,12 +154,13 @@
 
               <div class="flex gap-4">
                 <button
-                  class="bg-[#D52349] rounded py-2 px-5 text-white font-semibold text-sm"
+                  class="bg-[#D52349] rounded py-2 px-8 text-white font-semibold text-sm"
                 >
                   Continue Lendo
                 </button>
+
                 <button
-                  class="bg-[#252122] rounded py-2 px-5 text-white font-semibold text-sm"
+                  class="bg-[#252122] rounded py-2 px-8 text-white font-semibold text-sm"
                 >
                   20 comentarios
                 </button>
